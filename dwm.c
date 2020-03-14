@@ -1467,7 +1467,8 @@ run(void)
 
 void
 runAutostart(void) {
-	system("cd ~/Script; ./autostart.sh");
+	system("cd ~/Script; ./autostart.sh &");
+	system("cd ~/script; ./autostart_wait.sh &");
 }
 
 void
