@@ -16,7 +16,7 @@ static const char col_gray1[]       = "#192224";
 static const char col_gray2[]       = "#A1A6A8";
 static const char col_gray3[]       = "#E2E4E5";
 static const char col_gray4[]       = "#F9F9F9";
-static const char col_cyan[]        = "#66ccff";
+static const char col_cyan[]        = "#192224";
 static const unsigned int baralpha = 0xd0;
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
@@ -86,8 +86,6 @@ static const char *ranger[]	 = { "/home/qj/Script/st-ranger.sh", NULL };
 static const char *wpch[]	 = { "/home/qj/Script/wp-change.sh", NULL };
 
 
-#include "selfrestart.c"
-
 static Key keys[] = {
 	/* modifier                     key          function      argument */
 	{ MODKEY,					    XK_Return,	 spawn,        {.v = termcmd } },
@@ -146,7 +144,6 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-    { MODKEY|ShiftMask,             XK_r,      self_restart,   {0} },
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 };
 
@@ -166,3 +163,4 @@ static Button buttons[] = {
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
 };
+
