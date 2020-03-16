@@ -73,7 +73,7 @@ static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "56x35", NULL };
 static const char *termcmd[] = { "st", NULL };
 static const char *konsole[] = { "konsole", NULL };
-static const char *krunner[] = { "krunner", NULL };
+static const char *screenshot[] = { "deepin-screenshot", NULL };
 static const char *firefox[] = { "firefox", NULL };
 static const char *vivaldi[] = { "vivaldi-stable", NULL };
 static const char *chrome[]  = { "google-chrome-satble", NULL };
@@ -113,7 +113,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_j,		setmfact,      {.f = -0.05} },
 	{ MODKEY,                       XK_k,		setmfact,      {.f = +0.05} },
 	{ MODKEY,                       XK_Tab,     view,           {0} },
-	{ MODKEY,                       XK_d,	    spawn,		   {.v = krunner } },
+	{ MODKEY,                       XK_d,	    spawn,		   {.v = screenshot } },
 	{ MODKEY,                       XK_u,		fullscreen,     {0} },
 	{ MODKEY,                       XK_i,       incnmaster,     {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_i,       incnmaster,     {.i = -1 } },
