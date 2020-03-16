@@ -113,11 +113,11 @@ static Key keys[] = {
 	{ MODKEY,                       XK_j,		setmfact,      {.f = -0.05} },
 	{ MODKEY,                       XK_k,		setmfact,      {.f = +0.05} },
 	{ MODKEY,                       XK_Tab,     view,           {0} },
-	{ MODKEY,                       XK_d,	    spawn,		   {.v = screenshot } },
+	{ MODKEY|ShiftMask,             XK_s,	    spawn,		    {.v = screenshot } },
 	{ MODKEY,                       XK_u,		fullscreen,     {0} },
 	{ MODKEY,                       XK_i,       incnmaster,     {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_i,       incnmaster,     {.i = -1 } },
-	{ MODKEY,                       XK_s,      togglesticky,   {0} },
+	{ MODKEY,                       XK_s,       togglesticky,   {0} },
 	{ MODKEY,	              		XK_apostrophe,	togglescratch,  {.v = scratchpadcmd } },
 
 	/*
