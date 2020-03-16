@@ -10,7 +10,7 @@ static const unsigned int gappov    = 10;       /* vert outer gap between window
 static const int smartgaps          = 1;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=10" };
+static const char *fonts[]          = { "noto-fonts-cjk:size=10" };
 static const char dmenufont[]       = "Source Code Pro:size=10";
 static const char col_gray1[]       = "#192224";
 static const char col_gray2[]       = "#A1A6A8";
@@ -74,6 +74,7 @@ static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "56x35"
 static const char *termcmd[] = { "st", NULL };
 static const char *konsole[] = { "konsole", NULL };
 static const char *screenshot[] = { "deepin-screenshot", NULL };
+static const char *krunner[] = { "krunner", NULL };
 static const char *firefox[] = { "firefox", NULL };
 static const char *vivaldi[] = { "vivaldi-stable", NULL };
 static const char *chrome[]  = { "google-chrome-satble", NULL };
@@ -114,6 +115,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_k,		setmfact,      {.f = +0.05} },
 	{ MODKEY,                       XK_Tab,     view,           {0} },
 	{ MODKEY|ShiftMask,             XK_s,	    spawn,		    {.v = screenshot } },
+	{ MODKEY,						XK_b,		spawn,			{.v = krunner } },
 	{ MODKEY,                       XK_u,		fullscreen,     {0} },
 	{ MODKEY,                       XK_i,       incnmaster,     {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_i,       incnmaster,     {.i = -1 } },
