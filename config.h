@@ -77,7 +77,6 @@ static const char *screenshot[] = { "deepin-screenshot", NULL };
 static const char *krunner[] = { "krunner", NULL };
 static const char *firefox[] = { "firefox", NULL };
 static const char *vivaldi[] = { "vivaldi-stable", NULL };
-static const char *chrome[]  = { "google-chrome-satble", NULL };
 static const char *keynav[]  = { "/home/qj/Script/keynav.sh", NULL };
 static const char *volup[]	 = { "/home/qj/Script/vol-up.sh", NULL };
 static const char *voldown[] = { "/home/qj/Script/vol-down.sh", NULL };
@@ -108,7 +107,6 @@ static Key keys[] = {
 	{ MODKEY,                       XK_a,		setlayout,     {.v = &layouts[1]} },
 	{ MODKEY,                       XK_o,		setlayout,     {.v = &layouts[0]} },
 	{ MODKEY,                       XK_b,       togglebar,     {0} },
-	{ MODKEY,						XK_c,		spawn,		   {.v = chrome } },
 	{ MODKEY,						XK_f,		spawn,		   {.v = firefox } },
 	{ MODKEY,						XK_v,		spawn,		   {.v = vivaldi } },
 	{ MODKEY|ShiftMask,             XK_w,	    killclient,    {0} },
