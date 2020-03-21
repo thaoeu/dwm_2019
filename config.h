@@ -103,6 +103,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_h,		focusstack,    {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_h,		zoom,          {0} },
 	{ MODKEY,                       XK_l,		focusstack,    {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_l,		zoom,          {0} },
 	{ MODKEY,						XK_e,		spawn,		   {.v = ranger } },
 	{ MODKEY,                       XK_a,		setlayout,     {.v = &layouts[1]} },
 	{ MODKEY,                       XK_o,		setlayout,     {.v = &layouts[0]} },
