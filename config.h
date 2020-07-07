@@ -78,6 +78,7 @@ static const char *screenshot[] = { "deepin-screenshot", NULL };
 static const char *krunner[] = { "krunner", NULL };
 static const char *firefox[] = { "firefox", NULL };
 static const char *anki[]	 = { "anki", NULL };
+static const char *oud[]	 = { "electron-netease-cloud-music", NULL};
 static const char *vivaldi[] = { "vivaldi-stable", NULL };
 static const char *keynav[]  = { "/home/qj/Script/keynav.sh", NULL };
 static const char *volup[]	 = { "/home/qj/Script/vol-up.sh", NULL };
@@ -93,11 +94,10 @@ static Key keys[] = {
 	/* modifier                     key          function      argument */
 	{ MODKEY,					    XK_Return,	 spawn,        {.v = termcmd } },
 	{ MODKEY,                       XK_space,	 spawn,        {.v = dmenucmd } },
-	{ MODKEY,	                   	XF86XK_AudioLowerVolume,	 spawn,		   {.v = voldown } },
 	{ MODKEY, 						XF86XK_AudioRaiseVolume,	 spawn,		   {.v = up1 } },
 	{ 0,							XF86XK_AudioRaiseVolume,	 spawn,		   {.v = volup   } },
 	{ MODKEY,                   	XK_backslash,spawn,		   {.v = volup   } },
-	{ 0,							XK_Pause,	 spawn,		   {.v = voldown } },
+	{ 0,							XF86XK_AudioLowerVolume,	 spawn,		   {.v = voldown } },
 	{ MODKEY,						XF86XK_AudioLowerVolume,    spawn,        {.v = down1 } },
 	{ MODKEY,						XK_Insert,	 spawn,        {.v = wpch   } },
 	{ MODKEY,						XK_t,		 spawn,		   {.v = konsole } },
@@ -108,6 +108,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_l,		zoom,          {0} },
 	{ MODKEY,						XK_e,		spawn,		   {.v = ranger } },
 	{ MODKEY,						XK_m,		spawn,		   {.v = anki } },
+	{ MODKEY|ShiftMask,				XK_m,		spawn,		   {.v = oud } },
 	{ MODKEY,                       XK_a,		setlayout,     {.v = &layouts[1]} },
 	{ MODKEY,                       XK_o,		setlayout,     {.v = &layouts[0]} },
 	{ MODKEY,                       XK_b,       togglebar,     {0} },
