@@ -1,3 +1,4 @@
+#include <X11/XF86keysym.h>
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
@@ -10,7 +11,7 @@ static const unsigned int gappov    = 10;       /* vert outer gap between window
 static const int smartgaps          = 1;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "wqy-bitmapfont:size=10" };
+static const char *fonts[]          = { "wqy-bitmapfont:size=12" };
 static const char dmenufont[]       = "Source Code Pro:size=10";
 static const char col_gray1[]       = "#192224";
 static const char col_gray2[]       = "#A1A6A8";
@@ -76,6 +77,7 @@ static const char *konsole[] = { "konsole", NULL };
 static const char *screenshot[] = { "deepin-screenshot", NULL };
 static const char *krunner[] = { "krunner", NULL };
 static const char *firefox[] = { "firefox", NULL };
+static const char *anki[]	 = { "anki", NULL };
 static const char *vivaldi[] = { "vivaldi-stable", NULL };
 static const char *keynav[]  = { "/home/qj/Script/keynav.sh", NULL };
 static const char *volup[]	 = { "/home/qj/Script/vol-up.sh", NULL };
@@ -91,12 +93,12 @@ static Key keys[] = {
 	/* modifier                     key          function      argument */
 	{ MODKEY,					    XK_Return,	 spawn,        {.v = termcmd } },
 	{ MODKEY,                       XK_space,	 spawn,        {.v = dmenucmd } },
-	{ MODKEY,	                   	XK_equal,	 spawn,		   {.v = voldown } },
-	{ MODKEY, 						XK_Insert,	 spawn,		   {.v = up1 } },
-	{ 0,							XK_Insert,	 spawn,		   {.v = volup   } },
+	{ MODKEY,	                   	XF86XK_AudioLowerVolume,	 spawn,		   {.v = voldown } },
+	{ MODKEY, 						XF86XK_AudioRaiseVolume,	 spawn,		   {.v = up1 } },
+	{ 0,							XF86XK_AudioRaiseVolume,	 spawn,		   {.v = volup   } },
 	{ MODKEY,                   	XK_backslash,spawn,		   {.v = volup   } },
 	{ 0,							XK_Pause,	 spawn,		   {.v = voldown } },
-	{ MODKEY,						XK_Pause,    spawn,        {.v = down1 } },
+	{ MODKEY,						XF86XK_AudioLowerVolume,    spawn,        {.v = down1 } },
 	{ MODKEY,						XK_Insert,	 spawn,        {.v = wpch   } },
 	{ MODKEY,						XK_t,		 spawn,		   {.v = konsole } },
 	{ MODKEY,						XK_Escape,	 spawn,		   {.v = mute } },
@@ -105,6 +107,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_l,		focusstack,    {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_l,		zoom,          {0} },
 	{ MODKEY,						XK_e,		spawn,		   {.v = ranger } },
+	{ MODKEY,						XK_m,		spawn,		   {.v = anki } },
 	{ MODKEY,                       XK_a,		setlayout,     {.v = &layouts[1]} },
 	{ MODKEY,                       XK_o,		setlayout,     {.v = &layouts[0]} },
 	{ MODKEY,                       XK_b,       togglebar,     {0} },
