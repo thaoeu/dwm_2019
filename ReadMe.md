@@ -1,4 +1,3 @@
-# 我的 Dwm 配置
 `/patch`
 ## 补丁列表
 
@@ -52,31 +51,27 @@ dwm-warp-git-20160626-7af4d43.diff
 
 ## 键列表
 
-	M 代表 Mod 键 <C-A> 代表 Ctrl+a 键 <S-a> 代表 Shift+a 键 数字键指数字 1-9
+	M - Modkey  C - Ctrl S - Shift
 <M- 数字键 >			切换到数字对应标签
 <M-S- 数字键 >			将当前窗口移动到数字对应标签
 <M-C- 数字键 >			使数字对应标签和当前标签同时显示
-<M-C-0>					展示全部窗口
+<M-0>					展示全部窗口
 <M-S-w>					关闭窗口
 <M-S-q>					退出 Dwm
 <M-h> <M-l>				在窗口间移动
 <M-S-h> <M-S-L>			移动窗口到焦点区
 <M-u>					使窗口全屏，隐藏状态栏
-<M-Enter> <M-t>			打开终端
+<M-Enter> <M-t>			Konsole & st
 <M-'>					打开临时窗口
-<M-e>					打开 Ranger
-<M-d>					打开 Krunner
-<M-v>					打开 vivaldi
-<M-f>					打开 Firefox
-<M-c>					打开 Chrome
+<M-e>					Ranger
+<M-v>					Vivaldi
+<M-f>					Firefox
+<M-c>					Chrome
 <M-tab>					切换标签
 <M-b>					隐藏状态栏
 <M-a> <M-o>				切换标签模式
-<M-Esc>					静音
-<M-=>					增加音量
-<M-\>					降低音量
 <M-Insert>				更换壁纸
 <M-Space>				dmenu
-<M-s>					使窗口置于每一个标签，相当于全标签置顶
+<M-s>					使窗口置于每一个标签，相当于置顶
 <M-j> <M-k>				调整窗口大小
-
+更新了媒体按键，现在你可以使用键盘上的媒体按键控制音乐播放、音量大小
