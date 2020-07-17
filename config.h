@@ -106,6 +106,8 @@ static const char *PlPrev[]		=	{ "/home/qj/Script/Play-Prev.sh", NULL };
 static const char *Pause[]		=	{ "/home/qj/Script/Play-pause.sh", NULL };
 static const char *Up1[]		=	{ "/home/qj/Script/vol1u.sh", NULL };
 static const char *Dn1[]		=	{ "/home/qj/Script/vol1d.sh", NULL };
+static const char *LigInc[]		=	{ "/home/qj/Script/LightInc.sh", NULL };
+static const char *LigDec[]		=	{ "/home/qj/Script/LightDec.sh", NULL };
 
 
 static Key keys[] = {
@@ -152,6 +154,12 @@ static Key keys[] = {
 	{ 0,				XF86XK_AudioNext,		spawn,		{.v = PlNext } },
 	{ 0,				XF86XK_AudioPrev,		spawn,		{.v = PlPrev } },
 //	{ MODKEY,                   	XK_backslash,spawn,		   {.v = volup   } },
+
+	/******
+	BackLight
+	******/
+	{ 0,				XF86XK_MonBrightnessUp,		spawn,		{.v = LigInc } },
+	{ 0,				XF86XK_MonBrightnessDown,	spawn,		{.v = LigDec } },
 
 	/*
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
