@@ -37,7 +37,7 @@ static const unsigned int alphas[][3]      = {
 /******
 tagging
 ******/
-static const char *tags[] = { "1,", "2,", "'3,", "4,", "5,", "6.", "7.'", "8.", "9" };
+static const char *tags[] = { "\uf120", "\uf121", "'3,", "4,", "5,", "6.", "7.'", "8.", "9" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -100,10 +100,11 @@ static const char *ranger[]		=	{ "/home/qj/Script/st-ranger.sh", NULL };
 static const char *WpCh[]		=	{ "/home/qj/Script/wp-change.sh", NULL };
 static const char *VolUp[]		=	{ "/home/qj/Script/vol-up.sh", NULL };
 static const char *VolDown[]		=	{ "/home/qj/Script/vol-down.sh", NULL };
-static const char *Mute[]		=	{ "/home/qj/Script/vol-toggle.sh", NULL };
+static const char *Mute[]		=	{ "/home/qj/Script/VolMute.sh", NULL };
 static const char *PlNext[]		=	{ "/home/qj/Script/Play-Next.sh", NULL };
 static const char *PlPrev[]		=	{ "/home/qj/Script/Play-Prev.sh", NULL };
 static const char *Pause[]		=	{ "/home/qj/Script/Play-pause.sh", NULL };
+static const char *Stop[]		=	{ "/home/qj/Script/Play-Stop.sh", NULL };
 static const char *Up1[]		=	{ "/home/qj/Script/vol1u.sh", NULL };
 static const char *Dn1[]		=	{ "/home/qj/Script/vol1d.sh", NULL };
 static const char *LigInc[]		=	{ "/home/qj/Script/LightInc.sh", NULL };
@@ -153,6 +154,7 @@ static Key keys[] = {
 	{ 0,				XF86XK_AudioPause,		spawn,		{.v = Pause } } ,
 	{ 0,				XF86XK_AudioNext,		spawn,		{.v = PlNext } },
 	{ 0,				XF86XK_AudioPrev,		spawn,		{.v = PlPrev } },
+	{ 0,				XF86XK_AudioStop,		spawn,		{.v = Stop } },
 //	{ MODKEY,                   	XK_backslash,spawn,		   {.v = volup   } },
 
 	/******
