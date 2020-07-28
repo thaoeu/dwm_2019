@@ -97,6 +97,8 @@ Scripts
 ******/
 static const char *keynav[]		=	{ "/home/qj/Script/keynav.sh", NULL };
 static const char *ranger[]		=	{ "/home/qj/Script/st-ranger.sh", NULL };
+static const char *trayer[]		=	{ "/home/qj/Script/trayer.sh", NULL };
+static const char *fcitx[]		=	{ "/home/qj/Script/fcitx.sh", NULL };
 static const char *WpCh[]		=	{ "/home/qj/Script/wp-change.sh", NULL };
 static const char *VolUp[]		=	{ "/home/qj/Script/vol-up.sh", NULL };
 static const char *VolDown[]		=	{ "/home/qj/Script/vol-down.sh", NULL };
@@ -116,8 +118,9 @@ static Key keys[] = {
 	/* modifier                     key          function      argument */
 	{ MODKEY,			XK_Return,	spawn,		{.v = termcmd } },
 	{ MODKEY,                       XK_space,	spawn,		{.v = dmenucmd } },
-	{ MODKEY,			XK_t,		spawn,		{.v = konsole } },
+	{ MODKEY|ShiftMask,				XK_space,	spawn,		{.v = fcitx } },
 	{ MODKEY,			XK_Insert,	spawn,		{.v = WpCh   } },
+	{ MODKEY,			XK_t,		spawn,		{.v = konsole } },
 	{ MODKEY,                       XK_h,		focusstack,	{.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_h,		zoom,		{0} },
 	{ MODKEY,                       XK_l,		focusstack,	{.i = +1 } },
@@ -135,7 +138,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_k,		setmfact,	{.f = +0.05} },
 	{ MODKEY,                       XK_Tab,     	view,           {0} },
 	{ MODKEY|ShiftMask,             XK_s,	    	spawn,		{.v = screenshot } },
-//	{ MODKEY,			XK_d,		spawn,		{.v = krunner } },
+	{ MODKEY,			XK_d,		spawn,		{.v = trayer } },
 	{ MODKEY,			XK_i,		spawn,		{.v = keynav } },
 	{ MODKEY,                       XK_u,		fullscreen,     {0} },
 	{ MODKEY,                       XK_g,		incnmaster,     {.i = +1 } },
