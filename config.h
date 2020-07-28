@@ -19,7 +19,7 @@ static const char col_gray2[]       = "#A1A6A8";
 static const char col_gray3[]       = "#F1F1F0";
 static const char col_gray4[]       = "#A1A6A8";
 static const char col_cyan[]        = "#192224";
-static const unsigned int baralpha = 0xd0;
+static const unsigned int baralpha  = 0xd0;
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
 
@@ -118,7 +118,7 @@ static Key keys[] = {
 	/* modifier                     key          function      argument */
 	{ MODKEY,			XK_Return,	spawn,		{.v = termcmd } },
 	{ MODKEY,                       XK_space,	spawn,		{.v = dmenucmd } },
-	{ MODKEY|ShiftMask,				XK_space,	spawn,		{.v = fcitx } },
+	{ MODKEY|ShiftMask,		XK_space,	spawn,		{.v = fcitx } },
 	{ MODKEY,			XK_Insert,	spawn,		{.v = WpCh   } },
 	{ MODKEY,			XK_t,		spawn,		{.v = konsole } },
 	{ MODKEY,                       XK_h,		focusstack,	{.i = -1 } },
@@ -158,7 +158,7 @@ static Key keys[] = {
 	{ 0,				XF86XK_AudioNext,		spawn,		{.v = PlNext } },
 	{ 0,				XF86XK_AudioPrev,		spawn,		{.v = PlPrev } },
 	{ 0,				XF86XK_AudioStop,		spawn,		{.v = Stop } },
-//	{ MODKEY,                   	XK_backslash,spawn,		   {.v = volup   } },
+//	{ MODKEY,                   	XK_backslash,spawn,				{.v = volup   } },
 
 	/******
 	BackLight
@@ -172,8 +172,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
-#>#{ MODKEY,                       XK_space,  setlayout,      {0} },
-#>#{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
+//	{ MODKEY,                       XK_space,  setlayout,      {0} },
+//	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	*/
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
