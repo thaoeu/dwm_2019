@@ -3,7 +3,7 @@
 /******
 appearance
 ******/
-static const unsigned int borderpx  = 0;        /* border pixel of windows */
+static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const unsigned int gappih    = 5;       /* horiz inner gap between windows */
 static const unsigned int gappiv    = 5;       /* vert inner gap between windows */
@@ -12,8 +12,8 @@ static const unsigned int gappov    = 10;       /* vert outer gap between window
 static const int smartgaps          = 1;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "wqy-bitmapfont:size=12" };
-static const char dmenufont[]       = "Source Code Pro:size=12";
+static const char *fonts[]          = { "Noto-Mono:size=19" };
+static const char dmenufont[]       = "Source Code Pro:size=17";
 static const char col_gray1[]       = "#192224";
 static const char col_gray2[]       = "#A1A6A8";
 static const char col_gray3[]       = "#F1F1F0";
